@@ -4,12 +4,12 @@
     <% if task.completed %>
     <li>
       <i class="far fa-check-square"><%= link_to task.title, task_path(task) %></i>
-      <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, task_delete_path(task), method: :delete %>
+      <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, task_delete_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
     <% else %>
     <li>
       <i class="far fa-square"><%= link_to task.title, task_path(task) %></i>
-      <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, task_delete_path(task), method: :delete %>
+      <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, task_delete_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
     <% end  %>
   <% end  %>
