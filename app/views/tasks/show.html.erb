@@ -1,8 +1,15 @@
-<h1><%= @task.title %></h1>
-
-<p><%= @task.details %></p>
-<p><%= @task.completed %></p>
-<%= link_to "Edit this task", task_edit_path(@task.id) %>
+<div class="task_header">
+  <h1><%= @task.title %></h1>
+  <p class="btn btn-light"><%= link_to '<i class="fas fa-pencil-alt">Edit this task</i>'.html_safe, task_edit_path(@task.id) %></p>
+</div>
+<p id= "details"><%= @task.details %></p>
+<p>
+  <% if @task.completed %>
+      <i class="far fa-check-square"> This task is completed</i>
+    <% else %>
+      <i class="far fa-square"> This task is not completed yet !</i>
+  <% end  %>
+</p>
 <br>
 <hr>
-<%= link_to "Go back to all your tasks", tasks_path %>
+<p class= 'btn btn-light'><%= link_to "Go back to all your tasks", tasks_path %></p>

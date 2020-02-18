@@ -34,13 +34,13 @@ class TasksController < ApplicationController
   end
 
   def completed_display(task)
-    task ? 'This task is completed' : 'This task is not completed'
+    task ? 'This task is completed' : 'This task is not completed yet'
   end
 
   private
 
   def save_params
-    params.require(:task).permit(:title, :details)
+    params.require(:task).permit(:title, :details, :completed)
   end
 
   def mark_as_done!(task)

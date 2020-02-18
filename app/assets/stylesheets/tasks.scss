@@ -4,6 +4,7 @@
 body {
   font-family: 'Roboto', 'Arial', 'Sans-serif';
   font-size: 20px;
+  padding: 20px;
 }
 
 a {
@@ -18,4 +19,24 @@ ul {
 
 #add_task {
   margin-top: 20px;
+}
+
+// input {
+//   width: 50%;
+//   padding: 20px;
+//   font-size: 20px;
+//   margin: 8px;
+// }
+
+.task_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#details {
+  padding: 20px;
+  background: rgb(240, 240, 240);
+  border: solid 1px rgb(80, 80, 80);
+  border-radius: 16px;
 }
